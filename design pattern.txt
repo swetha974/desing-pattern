@@ -1,0 +1,48 @@
+import com.phone.OS;
+import com.phone.Android;
+import com.phone.Windows;
+import com.phone.OperatingSystemFactory;
+class interface OS
+{
+void spec();
+}
+ public class  Android implements OS
+{
+public void spec()
+{
+System.out.println("most powerful os");
+}
+}
+publicclass IOS implements OS
+{
+public void spec()
+{
+System.out.println("most secure os");
+}
+}
+public class Windows implements OS 
+{
+public void spec()
+{
+System.out.println(" used for computers");
+}
+}
+public class OperatingSystemFactory{
+public OS getInstance(String str){
+if(str.equals("open"))
+return new Android();
+else if(str.equals("closed"))
+return new IOS()
+else
+return new Windows()}
+}
+public class Factory main
+{
+public static void main(String args[])
+{
+OperatingSystemFactory osf=new OperatingSystemFactory();
+osf.getInstance("open");
+obj.spec();
+}
+}
+
